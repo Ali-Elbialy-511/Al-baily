@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cairo', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/background.jpg.jpeg') no-repeat center center/cover;
+  filter: blur(0px) brightness(1); /* قللنا السطوع عشان تكون أوضح */
+  z-index: 0;
+}
+
+.background-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* شفافية إضافية على الخلفية */
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.452);
+  padding: 40px 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.705);
+}
+
+
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+h1 {
+  font-size: 28px;
+  font-weight: 700; /* تقوية الخط */
+}
+
+h1, h2, .college, .job, .hobby {
+  display: inline-block;
+  background: rgba(0,0,0,0.25); /* صندوق شفاف */
+  padding: 2px 5px; /* تصغير البادينج جداً */
+  border-radius: 6px; /* حواف أصغر */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* ظل خفيف لتوضيح النص */
+  margin: 2px 0; /* مسافة أقل بين النصوص */
+}
+
+
+
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  margin: 10px 0;
+  font-weight: 600;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.links a {
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* ألوان خاصة بكل منصة */
+.facebook { background: #1877f2; }
+.instagram { background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4); }
+.whatsapp { background: #25d366; }
+.telegram { background: #0088cc; }
+.snapchat { background: #fffb00a2; color: #000; }
+.tiktok { background: #000; }
+.youtube { background: #ff0000; }
+.saraha { background: #545a88b7; color: #fff; }
+
+.links a:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.945);
+}
+
+.saraha:hover {
+  box-shadow: 0 0 20px rgba(255,59,59,0.6);
+}
